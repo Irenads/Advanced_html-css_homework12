@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'Montserrat-bold';
+    src: url(../styles/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face{
+    font-family: 'Montserrat-normal';
+    src: url(../styles/fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-normal';
+    src: url(../styles/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@mixin widhtHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flexDisplay($direction, $justify,$align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+@mixin txtMontserratBold($fontSize, $lineHeight, $textAlign) {
+    font-family: 'Montserrat-bold';
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+}
+@mixin txtMontserratNormal($fontSize, $lineHeight, $textAlign) {
+    font-family: 'Montserrat-normal';
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+}
+@mixin txtRobotoNormal($fontSize, $lineHeight, $textAlign) {
+    font-family: 'Roboto-normal';
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+}

@@ -1,0 +1,554 @@
+.header__nav {
+    @include widhtHeight(100%, 20%);
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        width: 50%;
+        @include txtMontserratBold(20px, 24px, center);
+        color: $textColorWhite;
+        &:hover {
+            color: $btnBGColor;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        width: 50%;
+        @include flexDisplay(row, center, center);
+        @include txtMontserratBold(14px, 17px, center);
+
+        &__login {
+            @include widhtHeight(90px, 36px);
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            color: $textColorWhite;
+
+            &:hover {
+                outline: none;
+                border-radius: $btnBDRadius;
+                border: 2px solid white;
+            }
+        }
+
+        &__sign-up {
+            @include widhtHeight(90px, 36px);
+            border: none;
+            background-color: transparent;
+            outline: none;
+            color: $textColorWhite;
+
+            &:hover {
+                outline: none;
+                border-radius: $btnBDRadius;
+                border: 2px solid white;
+            }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+}
+
+.header__section {
+    @include widhtHeight(100%, 80%);
+    @include flexDisplay(column, center, center);
+
+    &__dreamshare {
+        display: none;
+        @include txtMontserratBold(20px, 24px, center);
+        color: $textColorWhite;
+
+        @media screen and (min-width: 320px) and (max-width: 481px) {
+            display: block;
+        }
+    }
+
+    &__heading {
+        @include txtMontserratBold(52px, 63px, center);
+        color: $textColorWhite;
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include txtMontserratBold(30px, 37px, center);
+            margin-top: 25px;
+        }
+    }
+
+    &__txt {
+        @include txtRobotoNormal(24px, 24px, center);
+        color: #F7F3F2;
+        margin-top: 30px;
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include txtRobotoNormal(18px, 24px, center);
+            margin-top: 5px;
+        }
+    }
+
+    &__btn {
+        @include widhtHeight(225px, 40px);
+        border: none;
+        background-color: $btnBGColor;
+        outline: none;
+        color: $textColorWhite;
+        border-radius: $btnBDRadius;
+        margin-top: 33px;
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            width: 280px;
+            margin-top: 15px;
+            margin-bottom: 150px;
+        }
+
+        &:hover {
+            background-color: red;
+            transition: 0.6s;
+        }
+    }
+}
+
+.main {
+    @include flexDisplay(column, flex-start, center);
+
+    &__div {
+        @include widhtHeight(940px, 460px);
+        margin-top: 95px;
+        @include flexDisplay(column, space-between, center);
+
+        &__heading {
+            @include txtMontserratBold(26px, 32px, center);
+            color: $textTitleColor;
+        }
+
+        &__sections {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            &__section {
+                @include flexDisplay(column, flex-end, flex-start);
+                @include widhtHeight(32%, 400px);
+                background-size: cover;
+                background-position: center;
+                border-radius: $imgRadius;
+
+
+                &__btn {
+                    @include widhtHeight(70px, 20px);
+                    border: none;
+                    background-color: $btnBGColor;
+                    outline: none;
+                    @include txtMontserratNormal(12px, 10px, center);
+                    color: $textColorWhite;
+                    border-radius: $btnBDRadius;
+                    margin: 10px 20px;
+
+                    &:hover {
+                        background-color: red;
+                        transition: 0.6s;
+                    }
+                }
+
+                &__title {
+                    @include txtMontserratBold(24px, 26px, left);
+                    color: $textColorWhite;
+                    margin: 10px 20px;
+                }
+
+                &__txt {
+                    @include txtRobotoNormal(14px, 14px, left);
+                    color: $textColorWhite;
+                    margin: 10px 20px;
+                }
+            }
+
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 970px) {
+            @include widhtHeight(100%, 360px);
+            margin-top: 23px;
+
+            &__heading {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            &__sections {
+                &__section {
+                    height: 300px;
+
+                    &__btn {
+                        margin: 5px;
+                    }
+
+                    &__title {
+                        @include txtMontserratBold(20px, 20px, left);
+                        margin: 5px;
+                    }
+
+                    &__txt {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include widhtHeight(100%, 780px);
+            margin-top: 20px;
+
+            &__heading {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            &__sections {
+                @include flexDisplay(column, space-between, center);
+                height: 740px;
+
+                &__section {
+                    @include widhtHeight(300px, 240px);
+
+                    &__title {
+                        @include txtMontserratBold(20px, 20px, left);
+                    }
+                }
+            }
+        }
+    }
+
+    &__div2 {
+        @include widhtHeight(940px, 360px);
+        margin-top: 95px;
+        @include flexDisplay(column, space-between, center);
+
+        &__heading {
+            @include txtMontserratBold(26px, 32px, center);
+            color: $textTitleColor;
+        }
+
+        &__sections {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            &__section {
+                @include flexDisplay(column, space-between, center);
+                @include widhtHeight(25%, 220px);
+
+                &__title {
+                    @include txtMontserratBold(14px, 17px, center);
+                    color: $textTitleColor;
+                    margin: 10px 20px;
+                }
+
+                &__txt {
+                    @include txtRobotoNormal(14px, 14px, center);
+                    color: $txtColor;
+                    margin: 10px 20px;
+                }
+            }
+
+        }
+
+        &__btn {
+            @include widhtHeight(180px, 40px);
+            @include txtMontserratBold(14px, 17px, center);
+            color: $btnTxtColor;
+            outline: none;
+            border-radius: $btnBDRadius;
+            border: 2px solid $btnTxtColor;
+            background-color: transparent;
+
+            &:hover {
+                background-color: red;
+                color: $textColorWhite;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 970px) {
+            @include widhtHeight(480px, 600px);
+            margin-top: 35px;
+
+            &__heading {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            &__sections {
+                flex-wrap: wrap;
+                height: 465px;
+
+                &__section {
+                    @include widhtHeight(48%, 220px);
+                }
+            }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include widhtHeight(90%, 1030px);
+            margin-top: 25px;
+
+            &__heading {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            &__sections {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                @include widhtHeight(100%, 890px);
+
+                &__section {
+                    @include widhtHeight(100%, 200px);
+                }
+            }
+        }
+    }
+
+    &__div3 {
+        @include widhtHeight(940px, 1037px);
+        margin-top: 95px;
+        @include flexDisplay(row, space-between, center);
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 481px) and (max-width: 970px) {
+            @include widhtHeight(100%, 1030px);
+            margin-top: 35px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include widhtHeight(100%, 990px);
+            @include flexDisplay(column, space-between, center);
+            margin-top: 35px;
+        }
+
+        &__heading {
+            @include txtMontserratBold(26px, 32px, center);
+            color: $textTitleColor;
+            width: 100%;
+
+            @media screen and (min-width: 481px) and (max-width: 970px) {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                @include txtMontserratBold(22px, 27px, center);
+                width: 80%;
+            }
+        }
+
+        &__foto32 {
+            @include widhtHeight(32%, 300px);
+            @include flexDisplay(row, center, center);
+            border-radius: $imgRadius;
+            background-size: cover;
+            background-position: center;
+            @include txtMontserratBold(22px, 27px, center);
+            color: $textColorWhite;
+
+            &:hover {
+                @include txtMontserratBold(25px, 29px, center);
+                transition: 0.5s;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                @include widhtHeight(80%, 120px);
+            }
+        }
+
+        &__foto65 {
+            @include widhtHeight(65%, 300px);
+            @include flexDisplay(row, center, center);
+            border-radius: $imgRadius;
+            background-size: cover;
+            background-position: center;
+            @include txtMontserratBold(22px, 27px, center);
+            color: $textColorWhite;
+
+            &:hover {
+                @include txtMontserratBold(25px, 29px, center);
+                transition: 0.5s;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                @include widhtHeight(80%, 120px);
+            }
+        }
+
+    }
+
+
+    &__div4 {
+        @include widhtHeight(480px, 160px);
+        margin-top: 90px;
+        @include flexDisplay(column, space-between, center);
+
+        @media screen and (min-width: 481px) and (max-width: 970px) {
+            margin-top: 35px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+            @include widhtHeight(80%, 190px);
+            margin-top: 35px;
+        }
+
+        &__heading {
+            @include txtMontserratBold(26px, 32px, center);
+            color: $textTitleColor;
+
+            @media screen and (min-width: 481px) and (max-width: 970px) {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                @include txtMontserratBold(22px, 27px, center);
+            }
+
+        }
+
+        &__txt {
+            @include txtRobotoNormal(14px, 14px, center);
+            color: $txtColor;
+            margin: 18px 14px;
+        }
+
+        &__form {
+            @include flexDisplay(row, space-between, center);
+            @include widhtHeight(480px, 40px);
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                flex-direction: column;
+                @include widhtHeight(280px, 90px);
+            }
+
+            &__input {
+                @include widhtHeight(294px, 36px);
+                @include txtRobotoNormal(14px, 26px, left);
+                color: $txtColor9;
+                outline: none;
+                border-radius: $imgRadius;
+                border: 1px solid $txtColor9;
+
+                @media screen and (min-width: 320px) and (max-width: 480px) {
+                    @include widhtHeight(274px, 36px);
+                }
+            }
+
+            &__btn {
+                @include widhtHeight(170px, 40px);
+                border: none;
+                background-color: $btnBGColor;
+                outline: none;
+                color: $textColorWhite;
+                border-radius: $btnBDRadius;
+
+                &:hover {
+                    background-color: red;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 480px) {
+                    width: 280px;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 970px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+.footer {
+    width: 100%;
+    border-top: 2px solid $btnBGColor;
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+
+    &__info {
+        @include widhtHeight(940px, 220px);
+        @include flexDisplay(row, space-between, flex-start);
+        margin-top: 40px;
+
+        @media screen and (min-width: 581px) and (max-width: 970px) {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 580px) {
+            margin-left: 40px;
+            margin-right: 40px;
+            @include widhtHeight(320px, 200px);
+            @include flexDisplay(column, space-between, center);
+        }
+
+
+        &__first {
+            width: 70%;
+            @include widhtHeight(60%, 180px);
+            @include flexDisplay(row, space-between, flex-start);
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 320px) and (max-width: 580px) {
+                @include flexDisplay(column, space-between, center);
+                @include widhtHeight(100%, 160px);
+            }
+
+            &__logo {
+                @include txtMontserratNormal(16px, 20px, left);
+                color: $btnBGColor;
+            }
+
+            &__company {
+                @include widhtHeight(30%, 180px);
+                @include flexDisplay(column, space-between, flex-start);
+
+                @media screen and (min-width: 320px) and (max-width: 580px) {
+                    @include widhtHeight(100%, 70px);
+
+                }
+
+                &__title {
+                    @include txtMontserratBold(14px, 17px, left);
+                    color: $textTitleColor;
+
+                    @media screen and (min-width: 320px) and (max-width: 580px) {
+                        @include widhtHeight(100%, 18px);
+                        text-align: center;
+                    }
+                }
+
+                &__txt {
+                    @include txtRobotoNormal(14px, 26px, left);
+                    color: $txtColor9;
+
+                    @media screen and (min-width: 320px) and (max-width: 580px) {
+                        width: 100%;
+                        @include flexDisplay(row, center, center);
+                        flex-wrap: wrap;
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            &__partners {
+                @include txtMontserratBold(14px, 17px, left);
+                color: $textTitleColor;
+            }
+        }
+    }
+}
